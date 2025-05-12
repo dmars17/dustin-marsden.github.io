@@ -3,46 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dustin Marsden | Backend Developer</title>
+  <title>Dustin Marsden | Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="dark">
+  <button id="theme-toggle">Toggle Theme</button>
+
   <div class="container">
     <header>
-      <h1>Hi, I'm Dustin Marsden</h1>
-      <p>I'm a Backend Developer</p>
+      <h1>Dustin Marsden</h1>
+      <h2>Aspiring Software Engineer</h2>
     </header>
-    <section class="content">
-      <div class="about">
+
+    <div class="content">
+      <section class="about">
         <h2>About Me</h2>
-        <p>I specialize in C++, Python, and backend technologies...</p>
-      </div>
-      <div class="projects">
+        <p>
+          I’m a recent computer engineering graduate, from Florida State University, passionate about backend and systems development.
+          I know C++, Python, HTML, and CSS. Currently building out my project portfolio.
+        </p>
+      </section>
+
+      <section class="projects">
         <h2>Projects</h2>
-        <ul>
-          <li><a href="#">Project 1</a></li>
-          <li><a href="#">Project 2</a></li>
-        </ul>
-      </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>This site, built with HTML/CSS and hosted on GitHub Pages.</p>
+                <a href="#" onclick="return false"</a>
+                    <i class=""fab fa-github"></i> Comming Soon
+            </div>
+            <div class="project-card">
+                <h3>CLI Budget Tracker</h3>
+                <p>A Python script to track expenses from the terminal, stores data in JSON.</p>
+                <a href="#" onclick="return false"</a>
+                    <i class=""fab fa-github"></i> Comming Soon
+            </div>
+            <div class="project-card">
+                <h3>Todo App</h3>
+                <p>A simple to-do app using HTML, CSS, and vanilla JavaScript.</p>
+                <a href="#" onclick="return false"</a>
+                    <i class=""fab fa-github"></i> Comming Soon
+            </div>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your name" required />
+        <input type="email" placeholder="Your email" required />
+        <textarea placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
+
     <footer>
-      <p>Contact me at: <a href="youremail@example.com">dmarsden17@gmail.com</a></p>
+      <p>&copy; 2025 Dustin Marsden</p>
     </footer>
   </div>
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+    // Load saved preference or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    body.className = savedTheme;
 
-        <button type="submit">Send Message</button>
-    </form>
-  </section>
+    toggleButton.addEventListener('click', () => {
+      if (body.classList.contains('dark')) {
+        body.classList.replace('dark', 'light');
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.replace('light', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
 </body>
 </html>
