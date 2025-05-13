@@ -191,3 +191,69 @@ body.light .project-card {
 .project-card i.fab {
   font-size: 1rem;
 }
+
+/* Skills Section */
+.skills {
+  margin-top: 40px;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-grid span {
+  background-color: #2a2a2a;
+  color: #eee;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+body.light .skills-grid span {
+  background-color: #e0e0e0;
+  color: #222;
+}
+
+.skills-grid span:hover {
+  background-color: #444;
+}
+
+body.light .skills-grid span:hover {
+  background-color: #ccc;
+}
+
+/* Learning Section */
+.learning {
+  margin-top: 40px;
+}
+
+.learning h2 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.learning ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.learning li {
+  margin-bottom: 10px;
+}
+
+body.light .learning ul {
+  color: #333;
+}
